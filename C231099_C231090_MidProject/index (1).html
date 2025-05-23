@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style (1).css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-gray-200 dark:bg-gray-900">
+      <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <a href="#" class="items-center">
+                <img src="Group 2.png" class="h-8 mr-3" alt="Flowbite Logo" />
+            </a>
+
+            <!-- Center the search bar -->
+            <div class="flex-grow flex justify-center">
+                <div class="relative md:block">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                        </svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                    <input type="text" id="search-navbar"
+                        class="block w-80 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search...">
+                </div>
+            </div>
+
+            <!-- Align Home, About, Services to the right -->
+            <div class="items-center justify-end hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#home"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#services"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#reviews"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="#about"
+                            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Shopping Cart and User Menu -->
+            <div class="flex items-center space-x-4 md:order-2 ml-8">
+                <!-- Shopping Cart Icon -->
+                <button type="button"
+                    class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <span class="sr-only">Shopping Cart</span>
+                    <i class="fas fa-shopping-cart h-6 w-6"></i>
+                </button>
+
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                    <button type="button"
+                        class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="h-8 w-8 rounded-full"
+                            src="nav_account.png"
+                            alt="User Image">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main id="home">
+  <div id="custom-carousel" class="relative w-full max-w-screen-2xl mx-auto">
+
+    <!-- Carousel wrapper -->
+    <div class="relative h-[500px] overflow-hidden rounded-lg md:h-[600px]">
+
+      <!-- Slide 1 (visible by default) -->
+      <div class="carousel-item relative w-full h-full" data-carousel-item>
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 bg-indigo-200 w-full h-full transition-all duration-500">
+          <div class="p-10 md:p-20">
+            <h2 class="text-2xl font-bold uppercase text-gray-700">Latest Phone</h2>
+            <h1 class="text-5xl md:text-6xl font-bold uppercase text-gray-700 mt-2">Samsung Galaxy S25 Edge</h1>
+            <p class="pt-8 text-xl">The ultra-slim Samsung Galaxy S25 Edge features a 6.7" OLED display, Snapdragon 8 Elite chip, and a stunning 200MP camera. It boasts a titanium frame, 12GB RAM, and a 3,900mAh battery with IP68 water resistance. Starting at $1,099, it brings premium features in a sleek design.</p>
+            <button class="bg-green-950 text-white font-bold mt-8 py-2 px-5 rounded-2xl">Shop Now</button>
+          </div>
+          <div class="flex justify-center items-center p-8">
+            <img src="Adobe Express - file.png" alt="Samsung Galaxy S25 Edge" class="w-[520px] h-auto mx-auto p-4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item hidden absolute inset-0 w-full h-full" data-carousel-item>
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 bg-indigo-200 w-full h-full transition-all duration-500">
+          <div class="p-10 md:p-20">
+            <h2 class="text-2xl font-bold uppercase text-gray-700">Latest Phone</h2>
+            <h1 class="text-5xl md:text-6xl font-bold uppercase text-gray-700 mt-2">Nothing Phone 3a Pro</h1>
+            <p class="pt-8 text-xl">The Nothing Phone 3a Pro offers a 6.77" AMOLED display, Snapdragon 7s Gen 3, and a powerful 50MP main camera. It comes with 12GB of RAM and 256GB storage, along with a 5,000mAh battery. Priced affordably, it brings clean design and AI-driven features for smooth daily use.</p>
+            <button class="bg-green-950 text-white font-bold mt-8 py-2 px-5 rounded-2xl">Shop Now</button>
+          </div>
+          <div class="flex justify-center items-center p-8">
+            <img src="Adobe Express - file (1).png" alt="Nothing Phone 3a Pro" class="w-[600px] h-auto mx-auto p-4">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item hidden absolute inset-0 w-full h-full" data-carousel-item>
+        <div class="grid lg:grid-cols-2 sm:grid-cols-1 bg-indigo-200 w-full h-full transition-all duration-500">
+          <div class="p-10 md:p-20">
+            <h2 class="text-2xl font-bold uppercase text-gray-700">Latest Phone</h2>
+            <h1 class="text-5xl md:text-6xl font-bold uppercase text-gray-700 mt-2">iQOO Z10</h1>
+            <p class="pt-8 text-xl">The iQOO Z10 delivers impressive specs with a 6.77" AMOLED display, Snapdragon 7s Gen 3, and a 50MP main camera. It features 8GB of RAM, 7,300mAh battery with 90W fast charging, and IP65 durability. A budget powerhouse starting at ₹21,999.</p>
+            <button class="bg-green-950 text-white font-bold mt-8 py-2 px-5 rounded-2xl">Shop Now</button>
+          </div>
+          <div class="flex justify-center items-center p-8">
+            <img src="Adobe Express - file (2).png" alt="iQOO Z10" class="w-[430px] h-auto mx-auto p-4">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider controls -->
+    <button type="button" id="prevBtn" class="absolute top-1/2 left-4 -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-70 rounded-full p-3">
+      <svg class="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+      </svg>
+    </button>
+    <button type="button" id="nextBtn" class="absolute top-1/2 right-4 -translate-y-1/2 z-10 bg-white bg-opacity-50 hover:bg-opacity-70 rounded-full p-3">
+      <svg class="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Carousel Script -->
+  <script>
+  const prevButton = document.getElementById('prevBtn');
+  const nextButton = document.getElementById('nextBtn');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  let currentIndex = 0;
+
+  const showSlide = (index) => {
+    carouselItems.forEach((item, i) => {
+      if (i === index) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  };
+
+  const changeSlide = (direction) => {
+    currentIndex = (currentIndex + direction + carouselItems.length) % carouselItems.length;
+    showSlide(currentIndex);
+  };
+
+  prevButton.addEventListener('click', () => changeSlide(-1));
+  nextButton.addEventListener('click', () => changeSlide(1));
+
+  // Show the first slide initially
+  showSlide(currentIndex);
+
+  // Auto-play every 4 seconds (4000 ms)
+  setInterval(() => changeSlide(1), 4000);
+</script>
+
+</main>
+  
+<div class="products1 p-20 grid lg:grid-cols-3 sm:grid-cols-1 gap-y-5 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 rounded-lg shadow-lg">
+    <div class="shadow-2xl w-[380px] p-3">
+        <img src="ipad.png" alt="" class="h-3/6 w-full">
+        <h1 class="text-center font-bold text-3xl text-white mt-5">iPad 9</h1>
+        <p class="text-justify text-white mt-4">The iPad 9th Generation features a 10.2-inch Retina display, A13 Bionic chip for fast performance, and support for Apple Pencil (1st gen) and Smart Keyboard. It’s perfect for everyday tasks, learning, and entertainment, offering great value and versatility in a classic design.</p>
+    </div>
+    <div class="shadow-2xl w-[380px] h-[500px] p-3">
+        <img src="Group 6.png" alt="" class="h-3/6 w-full">
+        <h1 class="text-center font-bold text-3xl text-white mt-5">Macbook Air</h1>
+        <p class="text-justify text-white mt-4">The MacBook Air combines powerful performance with a thin, lightweight design. Powered by Apple’s M-series chip, it delivers exceptional speed and battery life, featuring a stunning Retina display, silent fanless design, and all-day portability — perfect for work, school, or creativity on the go.</p>
+    </div>
+    <div class="shadow-2xl w-[380px] p-3">
+        <img src="earphone.png" alt="" class="h-3/6 w-full">
+        <h1 class="text-center font-bold text-3xl text-white mt-5">Apple AirPods MAX</h1>
+        <p class="text-justify text-white mt-4 p-3">Apple AirPods Max are premium over-ear headphones featuring high-fidelity audio, Active Noise Cancellation, spatial audio with dynamic head tracking, and a customizable fit. Designed with a knit mesh canopy and memory foam ear cushions, they deliver immersive sound and exceptional comfort for all-day listening.</p>
+    </div>
+</div>
+
+        
+        <div id="services" class="max-w-7xl mx-auto py-8 px-4">
+            <!-- Title -->
+            <h2 class="text-2xl font-bold mb-6">Browse By Category</h2>
+         
+            <!-- Category Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              <!-- Single Category Card -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <!-- Icon (Phone) -->
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7 2h10a1 1 0 011 1v18a1 1 0 01-1 1H7a1 1 0 01-1-1V3a1 1 0 011-1z" />
+                </svg>
+                <!-- Label -->
+                <p class="mt-2 text-sm font-medium text-gray-800">Phones</p>
+              </div>
+         
+              <!-- Smart Watches -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <!-- A simple watch-like shape -->
+                  <rect x="8" y="5" width="8" height="14" rx="2" ry="2"></rect>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 2h8v3H8zM8 19h8v3H8z" />
+                </svg>
+                <p class="mt-2 text-sm font-medium text-gray-800">Smart Watches</p>
+              </div>
+         
+              <!-- Cameras -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h4l2-3h6l2 3h4v14H3z" />
+                  <circle cx="12" cy="13" r="3"></circle>
+                </svg>
+                <p class="mt-2 text-sm font-medium text-gray-800">Cameras</p>
+              </div>
+         
+              <!-- Headphones -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 15v-3a8 8 0 0116 0v3" />
+                  <rect x="2" y="15" width="4" height="6" rx="2" ry="2"></rect>
+                  <rect x="18" y="15" width="4" height="6" rx="2" ry="2"></rect>
+                </svg>
+                <p class="mt-2 text-sm font-medium text-gray-800">Headphones</p>
+              </div>
+         
+              <!-- Computers -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8M12 17v4" />
+                </svg>
+                <p class="mt-2 text-sm font-medium text-gray-800">Computers</p>
+              </div>
+         
+              <!-- Gaming -->
+              <div class="flex flex-col items-center p-4 bg-white rounded-lg border hover:shadow-md cursor-pointer">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <!-- Simplified "controller" shape -->
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 12H2a2 2 0 01-2-2V6a2 2 0 012-2h4m12 8h4a2 2 0 002-2V6a2 2 0 00-2-2h-4M8 16v2m8-2v2m-8 2h8m-8-4h8" />
+                </svg>
+                <p class="mt-2 text-sm font-medium text-gray-800">Gaming</p>
+              </div>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto py-8 px-4">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700">
+                <li>
+                    <h1><a href="#"
+                        class="text-2xl block py-2 pl-3 pr-4 text-gray-900 font-bold bg-blue-700 rounded md:bg-transparent md:text-gray-900 md:p-0 md:dark:text-gray-900"
+                        aria-current="page">New arrival</a></h1>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-2xl block py-2 pl-3 pr-4 text-black font-bold bg-blue-700 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                        aria-current="page">Best seller</a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-2xl block py-2 pl-3 pr-4 text-black font-bold bg-blue-700 rounded md:bg-transparent md:text-black md:p-0 md:dark:text-black"
+                        aria-current="page">Featured products</a>
+                </li>
+            </ul>
+        </div>
+
+
+        
+           <section class="products">
+              <div id="display-card"></div>
+                <div class="emne w-70 h-50">
+                  <div class="my-card card w-70 p-2 col-3">
+                    <h2 class="text-center">My Card</h2>
+                    <hr />
+                    <h3>Total Products: <span id="total-products">0</span></h3>
+                    <h3>Price: <span id="price">0</span></h3>
+                    <h3>Delivery Charge: <span id="delivery-charge">0</span></h3>
+                    <h3>Discount: <span id="discount">0</span></h3> <!-- ✅ Added this line -->
+                    <hr />
+                    <h2>Total Price: <span id="total">0</span></h2>
+                    <button onclick="orderProducts()" class="bg-orange-600 rounded-lg p-1">Order Now</button>
+                    <div id="details"></div>
+                  </div>
+                </div>
+            </section>
+      
+
+
+        <script>
+          document.addEventListener("scroll", function () {
+            const card = document.querySelector(".my-card");
+            const container = document.querySelector(".products");
+            const rect = container.getBoundingClientRect();
+
+            const fullyOutOfView = rect.bottom < 400 || rect.top > 100;
+
+            if (fullyOutOfView) {
+              card.style.display = "none";
+            } else {
+              card.style.display = "block";
+            }
+          });
+        </script>
+
+
+      <section id="reviews" class="bg-gradient-to-r from-blue-50 to-indigo-100 py-10">
+          <div class="h-[50px] flex items-center justify-center text-gray-500 text-xl">
+            <h1 class="text-2xl font-bold mb-4 text-center">Customer Reviews</h1>
+          </div>
+
+          <!-- Flex container to hold both review and comment box -->
+          <div class="flex flex-col lg:flex-row justify-center items-start gap-30 max-w-6xl mx-auto px-4">
+
+            <!-- Review Section -->
+            <div class="w-full lg:w-1/2 bg-white p-6 rounded-xl shadow-lg relative my-4">
+              <h2 class="text-2xl font-bold mb-4 text-center">Reviews</h2>
+              <div class="relative overflow-hidden h-48">
+                <!-- Slides -->
+                <div id="slides" class="flex transition-transform duration-500 ease-in-out h-full">
+                  <div class="min-w-full px-6 text-center flex flex-col items-center justify-center">
+                    <p class="text-lg italic">"Amazing service, really satisfied!"</p>
+                    <span class="block mt-4 font-bold text-gray-700">— Alex T.</span>
+                  </div>
+                  <div class="min-w-full px-6 text-center flex flex-col items-center justify-center">
+                    <p class="text-lg italic">"Fast delivery and excellent support!"</p>
+                    <span class="block mt-4 font-bold text-gray-700">— Sarah L.</span>
+                  </div>
+                  <div class="min-w-full px-6 text-center flex flex-col items-center justify-center">
+                    <p class="text-lg italic">"Great value for the price. Recommended!"</p>
+                    <span class="block mt-4 font-bold text-gray-700">— Mike B.</span>
+                  </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button onclick="prevSlide()"
+                  class="absolute top-1/2 -translate-y-1/2 left-2 bg-blue-500 hover:bg-blue-600 text-white text-xl w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                  &lt;
+                </button>
+                <button onclick="nextSlide()"
+                  class="absolute top-1/2 -translate-y-1/2 right-2 bg-blue-500 hover:bg-blue-600 text-white text-xl w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                  &gt;
+                </button>
+              </div>
+            </div>
+
+            <!-- Comment Box -->
+            <div class="w-full lg:w-1/2 bg-white p-7 rounded-xl shadow-lg my-4">
+              <h2 class="text-xl font-semibold mb-4 text-gray-800">Leave a Comment</h2>
+              <form onsubmit="submitComment(event)">
+                <textarea id="commentInput" rows="4" placeholder="Type your comment here..." class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none mb-4"></textarea>
+                <button type="submit"
+                  class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg shadow">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+        <script>
+            const slides = document.getElementById('slides');
+            const totalSlides = slides.children.length;
+            let index = 0;
+
+            function updateSlide() {
+              slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+              index = (index + 1) % totalSlides;
+              updateSlide();
+            }
+
+            function prevSlide() {
+              index = (index - 1 + totalSlides) % totalSlides;
+              updateSlide();
+            }
+
+            // Auto-slide every 4 seconds
+            setInterval(() => {
+              nextSlide();
+            }, 4000);
+
+            // Handle comment form submission
+            function submitComment(event) {
+              event.preventDefault(); // Prevent page reload
+              const textarea = document.getElementById('commentInput');
+              alert("Your comment was submitted!");
+              textarea.value = ""; // Clear textarea
+            }
+          </script>
+      </section>
+
+
+  
+        
+
+        <section class="flex justify-center items-center h-screen bg-gradient-to-r from-blue-500 to-blue-700">
+            <div class="flex justify-between items-center w-full px-8 gap-x-8">
+                <!-- Left Tablet Image -->
+                <img src="image 19.png" alt="Tablet" class="w-1/3 max-w-md rounded-lg shadow-lg">
+                
+                <!-- Sale Text -->
+                <div class="text-center text-white w-1/3">
+                    <h1 class="text-5xl font-bold">
+                        <span class="text-blue-900">11.11</span> <span class="text-white">Sale</span>
+                    </h1>
+                    <p class="mt-4 text-gray-200">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.
+                    </p>
+                </div>
+                
+                <!-- Right Tablet Image -->
+                <img src="Group 6.png" alt="Tablet" class="w-1/3 max-w-md rounded-lg shadow-lg">
+            </div>
+        </section>
+
+        
+        <section id="about" class="text-center">
+  <h3 class="text-2xl font-bold mb-6">Meet Our Team</h3>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+    <!-- Product Card -->
+    <div class="bg-white shadow-lg rounded-lg p-4 max-w-sm mx-auto min-h-[350px]">
+      <img src="belal.png" alt="iPhone 14 Pro Max" class="h-45 w-full object-contain">
+      <h1 class="text-lg font-bold mt-2">Belal</h1>
+      <p class="text-xl font-semibold mt-2">Devops</p>
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-4 max-w-sm mx-auto min-h-[350px]">
+      <img src="arfan (2).png" alt="Blackmagic Camera" class="h-45 w-full object-contain">
+      <h3 class="text-lg font-bold mt-2">Arfan</h3>
+      <p class="text-xl font-semibold mt-2">Designer</p>
+    </div>
+  </div>
+</section>
+
+        
+    </main>
+
+    <footer>
+        <div class="w-full bg-gray-900 py-10 px-6">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start">
+                <!-- Logo & Social Links -->
+                <div class="flex space-x-4 mt-3">
+                    <h2 class="text-2xl font-bold flex items-center">
+                        <img src="Group 2.png" class="h-8 mr-3" alt="Flowbite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+                    </h2>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+ 
+            <!-- Services -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold">Services</h3>
+                    <ul class="mt-3 space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Bonus program</a></li>
+                        <li><a href="#" class="hover:text-white">Gift cards</a></li>
+                        <li><a href="#" class="hover:text-white">Credit and payment</a></li>
+                        <li><a href="#" class="hover:text-white">Service contracts</a></li>
+                        <li><a href="#" class="hover:text-white">Non-cash account</a></li>
+                        <li><a href="#" class="hover:text-white">Payment</a></li>
+                    </ul>
+                </div>
+ 
+                <!-- Assistance to the Buyer -->
+                <div>
+                    <h3 class="text-lg font-semibold">Assistance to the buyer</h3>
+                    <ul class="mt-3 space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Find an order</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of delivery</a></li>
+                        <li><a href="#" class="hover:text-white">Exchange and return of goods</a></li>
+                        <li><a href="#" class="hover:text-white">Guarantee</a></li>
+                        <li><a href="#" class="hover:text-white">Frequently asked questions</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of use of the site</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app (1).js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+#display-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 800px 500px;
+  grid-gap: 50px;
+  margin-top: auto;
+  padding: 50px;
+}
+
+.shopping {
+  padding: 10px;
+  background-color: palegreen;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: rebeccapurple;
+}
+
+.my-card {
+  position: fixed;
+  height: inherit;
+  right: 50px;
+  top: 145px;
+  background-color: lightyellow;
+  border-radius: 10px;
+  display: none; /* Initially hidden */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.products1 img {
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+
+  .products1 img:hover {
+    transform: scale(1.1); /* Scale image up by 10% */
+  }
